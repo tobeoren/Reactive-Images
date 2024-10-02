@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Suara</title>
+    <script>
+        function updateImage() {
+            fetch('/status_suara')  // Meminta status suara dari server
+                .then(response => response.json())
+                .then(data => {
+                    // Mengubah sumber gambar sesuai status suara
+                    let img = document.getElementById('status-image');
+                    if (data.status_suara) {
+                        img.src = 'static/suara_terdeteksi.png';
+                    } else {
+                        img.src = 'static/tidak_ada_suara.png';
+                    }
+                });
+        }
+
+        // Mengatur polling setiap 1 detik
+        setInterval(updateImage, 400);
+    </script>
+</head>
+<body>
+    <h1>Status Suara</h1>
+    <img id="status-image" src="static/tidak_ada_suara.png" alt="Status Suara">
+</body>
+</html>
