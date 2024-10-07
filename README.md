@@ -3,6 +3,9 @@
 ### 1. **Introduction**
 This is a Python-based sound detection app that listens to audio input from a selected microphone. It processes the audio in real time to detect whether there is sound (based on a set threshold) and updates this status on a web interface. The app uses libraries like `numpy` for processing, `pyaudio` for capturing sound, and `Flask` to serve a web page that displays the sound detection status.
 
+<img width="665" alt="image" src="https://github.com/user-attachments/assets/7a5d9eb1-30ce-4579-8352-a9dd78fd3c1a">
+
+
 ---
 
 ### 2. **Features**
